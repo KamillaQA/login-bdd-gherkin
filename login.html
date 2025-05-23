@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login</title></head>
+<body>
+  <h2>Login</h2>
+  <form id="login-form">
+    <label for="email">Email:</label>
+    <input id="email" type="email" /><br><br>
+    <label for="senha">Senha:</label>
+    <input id="senha" type="password" /><br><br>
+    <button id="entrar" type="submit">Entrar</button>
+  </form>
+  <div id="painel-inicial" style="display:none; margin-top:20px; color:green;">
+    Bem-vindo ao painel inicial!
+  </div>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('painel-inicial').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
